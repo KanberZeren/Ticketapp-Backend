@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "https://ticketapp-frontend.onrender.com")
 @RestController
 public class TicketRestController {
 
@@ -21,7 +21,7 @@ public class TicketRestController {
         return service.save(ticket);
     }
 
-    @CrossOrigin(origins = "http://localhost:8081")
+    @CrossOrigin(origins = "https://ticketapp-frontend.onrender.com")
     @GetMapping("/ticket/{id}")
     public TicketEntity getTicket(@PathVariable String id){
         Long  ticketId = Long.parseLong(id);
