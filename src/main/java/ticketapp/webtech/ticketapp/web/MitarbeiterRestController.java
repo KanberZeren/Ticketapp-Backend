@@ -6,7 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "https://ticketapp-frontend.onrender.com")
+//@CrossOrigin(origins = "https://ticketapp-frontend.onrender.com")
+@CrossOrigin(origins = "http://localhost:8081")
 @RestController
 public class MitarbeiterRestController {
 
@@ -20,7 +21,7 @@ public class MitarbeiterRestController {
 
     @GetMapping("/mitarbeiter/{id}")
     public MitarbeiterEntity getMitarbeiter(@PathVariable String id){
-        Long  mitarbeiterId = Long.parseLong(id);
+        Long mitarbeiterId = Long.parseLong(id);
         return service.get(mitarbeiterId);
     }
 

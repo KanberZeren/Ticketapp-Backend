@@ -1,10 +1,10 @@
 package ticketapp.webtech.ticketapp.repository;
 
-import ticketapp.webtech.ticketapp.entity.MitarbeiterEntity;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import ticketapp.webtech.ticketapp.entity.MitarbeiterEntity;
 
 @Repository
-public interface MitarbeiterRepository extends CrudRepository<MitarbeiterEntity, Long> {
+public interface MitarbeiterRepository extends JpaRepository<MitarbeiterEntity, Long> {
     MitarbeiterEntity findByBenutzername(String benutzername);
 }
